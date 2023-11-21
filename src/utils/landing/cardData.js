@@ -1,4 +1,8 @@
-import styles from "../../Routes/Landing/Landing.module.css";
+const styles = {
+    text_orange: 'orange',
+    text_purple: 'purple',
+    text_yellow: 'yellow'
+}
 
 export const cardsWithLink = [
     {
