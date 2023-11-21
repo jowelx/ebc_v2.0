@@ -1,0 +1,19 @@
+.question:hover {
+    color: var(--bs-orange);
+    cursor: pointer;
+}
+
+.gear:hover {
+    color: var(--bs-blue);
+    cursor: pointer;
+}
+
+.images:hover {
+    color: var(--bs-teal);
+    cursor: pointer;
+}
+
+.camera2:hover {
+    color: var(--bs-red);
+    cursor: pointer;
+}

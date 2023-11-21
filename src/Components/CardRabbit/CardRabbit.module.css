@@ -1,0 +1,102 @@
+#cardhorizontal{
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+    background-color: rgba(64, 124, 122, 1);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: black;
+}
+
+#imagerabbit{
+    position: relative;
+    align-self: stretch;
+    width: 6.5rem;
+    max-height: max-content;
+    z-index: 1;
+    object-fit: cover;
+    background-color: white;
+}
+
+#cardcontainerrabbit{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+    position: relative;
+    flex: 1;
+    align-self: stretch;
+    flex-grow: 1;
+    z-index: 0;
+}
+
+#cardtittlerabbit{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+#subrabbit{
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+#textwrapper{
+    position: relative;
+    flex: 1;
+    margin-top: -1px;
+    color: rgba(163, 163, 163, 1);
+    font-size: var(--caption-font-size);
+    letter-spacing: var(--caption-letter-spacing);
+    line-height: var(--caption-line-height);
+    font-style: var(--caption-font-style);
+}
+
+#namerabbit{
+    position: relative;
+    align-self: stretch;
+    font-family: var(--h6-font-family);
+    font-weight: var(--h6-font-weight);
+    color: white;
+    font-size: var(--h6-font-size);
+    letter-spacing: var(--h6-letter-spacing);
+    line-height: var(--h6-line-height);
+    font-style: var(--h6-font-style);
+}
+
+#cardinforabbit{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+#divmacho{
+    position: relative;
+    flex: 1;
+    margin-top: -1px;
+    font-family: var(--caption-font-family);
+    font-weight: var(--caption-font-weight);
+    color: rgba(224, 224, 224, 1);
+    font-size: var(--caption-font-size);
+    letter-spacing: var(--caption-letter-spacing);
+    line-height: var(--caption-line-height);
+    font-style: var(--caption-font-style);
+}

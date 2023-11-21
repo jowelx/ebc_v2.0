@@ -1,0 +1,11 @@
+.btnProfile {
+    background-color: #42507B;
+    font-family: 'Manrope', Helvetica;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btnProfileIcon {
+    margin-right: 8px;
+}

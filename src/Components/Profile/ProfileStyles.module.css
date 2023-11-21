@@ -1,0 +1,23 @@
+.containerSize {
+  min-width: auto;
+  min-height: 177px;
+  padding:0 5rem 0 5rem ;
+  background: #E2E8F0; 
+}
+
+@media (max-width: 1280px) {
+  .containerSize {
+    min-width: auto;
+    min-height: 177px;
+    margin: auto;
+  }
+}
+
+.perfilBG{
+  background: red;
+}
+
+.photo {
+  width: 4rem;
+  height:4rem;
+}

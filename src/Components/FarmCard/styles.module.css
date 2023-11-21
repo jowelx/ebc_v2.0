@@ -1,0 +1,27 @@
+.imageSize{
+    width: auto !important;
+    height: 200px !important;
+    object-fit: cover;
+}
+
+.textLimit {
+  -webkit-line-clamp: 1 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+}
+
+.textLimitDesc {
+  -webkit-line-clamp: 2 !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+}
+
+.cardSize {
+  min-width: 300px !important;
+  min-height: 200px !important;
+  
+}

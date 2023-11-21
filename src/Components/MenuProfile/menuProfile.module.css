@@ -1,0 +1,28 @@
+
+#linkPaginationProfile {
+    text-decoration: none;
+    color: #333333;
+    background-color:#E2E8F0;
+    width:full;
+    border:none;
+
+}
+
+#linkPaginationProfile :hover {
+    border: white; /* Añade un borde al pasar el ratón */
+  }
+
+#menu {
+    padding:0 5rem 0 5rem ;
+    background:#E2E8F0;
+}
+
+.active {
+    background:red;
+    /* font-size: 2rem; */
+}
+
+.containerCages{
+    /* background:green; */
+    padding: 10rem , 0, 5rem , 0 ;
+}

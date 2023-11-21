@@ -1,0 +1,12 @@
+.avatar {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+/* @media (max-width: 576px) {
+    .avatar {
+        width: 30px;
+        height: 30px;
+    }
+} */

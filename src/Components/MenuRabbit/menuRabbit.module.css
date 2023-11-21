@@ -1,0 +1,10 @@
+
+#linkPaginationRabbit {
+    text-decoration: none;
+    color: green;
+    background-color: white;
+}
+
+#linkPaginationRabbi :hover {
+    border: white; /* Añade un borde al pasar el ratón */
+  }
