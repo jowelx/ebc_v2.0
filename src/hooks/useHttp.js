@@ -4,7 +4,7 @@
 // validation problems in the UI, on another hand sendRequest is the function to realize the http petition, receive
 // url, method, body and use headers to validate a JWT
 
-import Cookies from "js-cookie"
+
 import { useCallback, useState } from "react"
 
 export const useHttp = () => {
@@ -12,7 +12,7 @@ export const useHttp = () => {
     const [error, setError] = useState(null);
     const [data, setData] = useState(null);
     const [isntOk, setIsntOk] = useState(null);
- 
+    const token = localStorage.getItem('authToken')
     const sendRequest = useCallback(
         async (url, method = 'GET', body = null) => {
             setIsLoading(true);
@@ -26,7 +26,7 @@ export const useHttp = () => {
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json',
-                        'Authorization': Cookies.get('authToken') ? `Bearer ${Cookies.get('authToken')}` : null
+                        'Authorization': token ? `Bearer ${token}` : null
                     }
                 });
 

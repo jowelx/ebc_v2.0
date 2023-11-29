@@ -3,13 +3,13 @@
 // submit sends the information to backend
 
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useRouter } from 'next/navigation'
 import PasswordSection from "../../UI/PasswordSection"
 import Button from '../../UI/Button'
 
-const index = ({setSuccess}) => {
+const index = ({ setSuccess }) => {
 
-  const navigate = useNavigate()
+  const router = useRouter()
   const [error, setError] = useState(false)
   const [warning, setWarning] = useState(false)
 
@@ -23,8 +23,8 @@ const index = ({setSuccess}) => {
   const handleInputChange = (e) => {
     const { id, value } = e.target;
     setFormData({
-    ...formData,
-    [id]: value,
+      ...formData,
+      [id]: value,
     });
   };
 
@@ -43,27 +43,27 @@ const index = ({setSuccess}) => {
       setSuccess(true)
       setTimeout(() => {
         setSuccess(false)
-        navigate('/login')
+        router.push('/login')
       }, 3000);
       console.log('Datos a enviar:', formData)
-    } 
+    }
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <PasswordSection 
-        type="password" 
-        id="password" 
-        placeholder="************" 
-        label="Contraseña" 
+      <PasswordSection
+        type="password"
+        id="password"
+        placeholder="************"
+        label="Contraseña"
         onChange={handleInputChange}
         value={formData.password}
       />
-      <PasswordSection 
-        type="password" 
-        id="password_confirm" 
-        placeholder="************" 
-        label="Confirmar contraseña" 
+      <PasswordSection
+        type="password"
+        id="password_confirm"
+        placeholder="************"
+        label="Confirmar contraseña"
         onChange={handleInputChange}
         value={formData.password_confirm}
       />

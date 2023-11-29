@@ -1,20 +1,19 @@
 // This component use some UI elements to construct a form to login to our application, you can login using
 // a valid email with their respective password, this information will send to backend and validate, if allright
 // you will be in the main view of the website
-
+'use client'
 import React, { useState, useEffect } from "react";
 import AppLink from "../../UI/AppLink";
 import FormSection from "../../UI/FormSection";
 import PasswordSection from "../../UI/PasswordSection";
 import Button from "../../UI/Button";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import { useHttp } from "../../hooks/useHttp";
-import Cookies from "js-cookie";
 import { apiUrls } from "../../utils/links";
 import Loader from "../../UI/Loader";
 
-const index = () => {
-  const navigate = useNavigate();
+const Index = () => {
+  const router = useRouter()
   const [formSubmited, setFormSubmited] = useState(false);
   const { isLoading, error, data, sendRequest, isntOk } = useHttp();
 
@@ -47,11 +46,11 @@ const index = () => {
   };
 
   if (data) {
-    Cookies.set("authToken", data.token);
-    Cookies.set("userId", data.id);
+    localStorage.setItem("authToken", data.token);
+    localStorage.setItem("userId", data.id);
     localStorage.setItem("logedAccount", JSON.stringify(data.user));
     setTimeout(() => {
-      navigate("/");
+      router.push("/");
     }, 1000);
   }
 
@@ -84,4 +83,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

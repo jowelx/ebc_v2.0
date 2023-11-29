@@ -1,7 +1,7 @@
 // This register form is using to sign up to our application, you can complete the register putting the inputs
 // Name, Lastname, Email and password, the button type submit sends the information to validate to backend
 // if everything is ok, you can login at the route /login using these credentials.
-
+'use client'
 import React, { useEffect, useState } from 'react'
 import FormSection from '../../UI/FormSection'
 import PasswordSection from '../../UI/PasswordSection'
@@ -9,7 +9,7 @@ import Button from '../../UI/Button'
 import FormSelect from '../../UI/FormSelect'
 import { roles } from '../../utils/roles'
 import { useHttp } from '../../hooks/useHttp'
-import { useNavigate } from 'react-router-dom'
+import { useRouter } from 'next/navigation'
 import { apiUrls } from '../../utils/links'
 import Loader from '../../UI/Loader'
 
@@ -18,7 +18,7 @@ const index = () => {
     const [warning, setWarning] = useState(false)
     const [formSubmited, setFormSubmited] = useState(false)
     const { isLoading, error, data, sendRequest, isntOk } = useHttp()
-    const navigate = useNavigate()
+    const router = useRouter()
 
     const [formData, setFormData] = useState({
         username: "",
@@ -32,15 +32,15 @@ const index = () => {
             sendRequest(`${apiUrls.urlUsers}`, 'POST', formData)
         }
     }, [formSubmited])
-    
+
     const handleInputChange = (e) => {
         const { id, value } = e.target;
         setFormData({
-        ...formData,
-        [id]: value,
+            ...formData,
+            [id]: value,
         });
     };
-    
+
     const handleSubmit = (e) => {
         e.preventDefault()
         setWarning(false)
@@ -60,13 +60,13 @@ const index = () => {
 
     if (data) {
         setTimeout(() => {
-            navigate('/login')
+            router.push('/login')
         }, 1000);
     }
-    
+
     return (
         <form onSubmit={handleSubmit}>
-            <FormSection 
+            <FormSection
                 type="text"
                 id="username"
                 placeholder="Nombre de usuario"
@@ -75,26 +75,26 @@ const index = () => {
                 onChange={handleInputChange}
                 value={formData.username}
             />
-            <FormSection 
-                type="email" 
-                id="email" 
-                placeholder="name@example.com" 
-                label="Email" 
+            <FormSection
+                type="email"
+                id="email"
+                placeholder="name@example.com"
+                label="Email"
                 onChange={handleInputChange}
                 value={formData.email}
             />
-            <PasswordSection 
-                id="password" 
-                placeholder="********" 
-                label="Password" 
+            <PasswordSection
+                id="password"
+                placeholder="********"
+                label="Password"
                 onChange={handleInputChange}
                 value={formData.password}
             />
-            <FormSelect 
+            <FormSelect
                 id="is_producer"
                 label="Selecciona tu rol"
                 value={formData.is_producer}
-                list={roles} 
+                list={roles}
                 onChange={handleInputChange}
             />
             {warning && <p className="text-danger"> La contraseña debe tener más de 8 caracteres </p>}

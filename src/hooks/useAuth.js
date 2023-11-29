@@ -1,7 +1,7 @@
 'use client'
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 export function useIsAuthPath(authPaths) {
-    //   const location = useRouter();
-    return false// authPaths.some(path => location.pathname.includes(path));
+    const location = useRouter();
+    return authPaths.some(path => location?.pathname?.includes(path));
 }
