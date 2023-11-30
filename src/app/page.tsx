@@ -15,13 +15,22 @@ const Text = styled.p({
 /*Estilizar como css*/
 const TextCss = styled.p`
 font-size:10px`
-/*Estilizar componentes de Material UI*/
+/*Estilizar componentes de Material UI o cualquier otra libreria*/
+/*Se pone styled(aca se pone el componente que se desea estilizar)*/
+/*Estilizar con objetos literales*/
 const ButtonObject = styled(Button)({
   backgroundColor: 'cian'
 })
+/*Estilizar como css*/
 const ButtonCss = styled(Button)`
 background-color:orange
 `
+/*Nota: cuando se ulizan pixeles en objetos 
+literales no hace falta poner la unidad, 
+solo el numero, en los caso en que se especifican
+varia propiedades a la vez 
+como por ejemplo en css padding:10px 5px,
+en objetos literales se tiene que poner '10px 5px' */
 
 export default function Home() {
   return (
