@@ -1,5 +1,27 @@
+'use client'
 import Image from 'next/image'
 import styles from './page.module.css'
+import styled from '@emotion/styled'
+import { Button } from '@mui/material'
+
+
+
+/* Estilizar componentes con emotion styled*/
+/* Para usar las etiquetas de HTML5 simplemtente se pone styled.etiqueta*/
+/*Estilizar con objetos literales*/
+const Text = styled.p({
+  fontSize: 10
+})
+/*Estilizar como css*/
+const TextCss = styled.p`
+font-size:10px`
+/*Estilizar componentes de Material UI*/
+const ButtonObject = styled(Button)({
+  backgroundColor: 'cian'
+})
+const ButtonCss = styled(Button)`
+background-color:orange
+`
 
 export default function Home() {
   return (
@@ -9,6 +31,21 @@ export default function Home() {
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
+        <ButtonObject variant='contained'>
+
+          Boton A
+
+        </ButtonObject>
+        <Text>
+          Texto A
+        </Text>
+        <ButtonCss variant='contained'>
+
+          Boton B
+        </ButtonCss>
+        <TextCss>
+          Texto B
+        </TextCss>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
