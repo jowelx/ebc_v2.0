@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Cookies from "js-cookie";
+
 import { apiUrls } from "../utils/links";
 
 const useFetchRabbitsWithFarmData = (isLoading, data, sendRequest, breedSelected) => {
@@ -10,8 +10,8 @@ const useFetchRabbitsWithFarmData = (isLoading, data, sendRequest, breedSelected
     const headers = {
         "Content-Type": "application/json",
         Accept: "application/json",
-        Authorization: Cookies.get("authToken")
-            ? `Bearer ${Cookies.get("authToken")}`
+        Authorization: localStorage.getItem("authToken")
+            ? `Bearer ${localStorage.getItem("authToken")}`
             : null,
     };
 

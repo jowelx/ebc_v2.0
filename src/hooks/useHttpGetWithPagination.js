@@ -1,5 +1,4 @@
 import { useState, useCallback } from "react";
-import Cookies from "js-cookie";
 // import { headers } from "./useHttp";
 
 const useHttpGetWithPagination = () => {
@@ -19,7 +18,7 @@ const useHttpGetWithPagination = () => {
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json',
-                        'Authorization': Cookies.get('authToken') ? `Bearer ${Cookies.get('authToken')}` : null
+                        'Authorization': localStorage.getItem('authToken') ? `Bearer ${localStorage.getItem('authToken')}` : null
                     }
                 });
                 if (!response.ok) {
