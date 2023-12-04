@@ -21,7 +21,7 @@ import logo from '../../assets/logoText.svg';
 const pages = ['Comunidad', 'Mercado', 'Eventos y recursos'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function ResponsiveAppBar() {
+function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -212,4 +212,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Navbar;
