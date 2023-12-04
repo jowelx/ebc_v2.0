@@ -1,6 +1,7 @@
 import {
     type ReactNode,
 } from "react";
+import { Variants } from 'framer-motion';
 import { GridDirection } from '@mui/material/Grid';
 export interface ContainerProps {
     direction?: GridDirection | undefined;
@@ -23,3 +24,8 @@ export interface ItemProps {
     xl?: number;
     sm?: number;
 }
+export interface AnimatedComponent {
+    children: ReactNode;
+    variants: Variants
+    props?: any
+} 
