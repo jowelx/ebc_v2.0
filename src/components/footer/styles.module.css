@@ -1,0 +1,49 @@
+.footerLink {
+  color: #4f2f4a;
+  font-weight: 700;
+  margin: 8px 0;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 0;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+}
+
+.footerTitle {
+  color: #0a0a0a;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.footerRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 250px;
+}
+
+.listItem {
+  margin-bottom: 8px;
+}
+
+.footerTag {
+  padding: 16px 0;
+}
+
+.copyRight {
+  color: #4f2f4a;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footerRow {
+    flex-direction: column;
+    margin-right: 0;
+    margin-left: 20px;
+  }
+}
