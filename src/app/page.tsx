@@ -10,7 +10,8 @@ import { Button } from '@mui/material'
 /* Para usar las etiquetas de HTML5 simplemtente se pone styled.etiqueta*/
 /*Estilizar con objetos literales*/
 const Text = styled.p({
-  fontSize: 10
+  fontSize: 10,
+  fontFamily: 'Manrope'
 })
 /*Estilizar como css*/
 const TextCss = styled.p`
