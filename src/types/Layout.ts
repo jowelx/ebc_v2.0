@@ -26,6 +26,6 @@ export interface ItemProps {
 }
 export interface AnimatedComponent {
     children: ReactNode;
-    variants: Variants
+    variants?: Variants
     props?: any
 } 

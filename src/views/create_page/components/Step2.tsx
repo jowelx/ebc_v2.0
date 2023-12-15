@@ -155,7 +155,7 @@ const Step2: FC<Step> = ({ setStep }) => {
 
 
 
-                                <ButtonContained onClick={() => setStep(3)}>
+                                <ButtonContained onClick={() => setStep(2)}>
                                     Guardar y agregar otro conejo
                                 </ButtonContained>
                             </Card>

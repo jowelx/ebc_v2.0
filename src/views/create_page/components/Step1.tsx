@@ -9,6 +9,7 @@ import Input from '@/components/UI/Input';
 import SelectCustom from '@/components/UI/Select';
 import { FadeInOut } from '@/constants/Animations';
 import { MotionDiv } from '@/components/UI/Animated';
+
 import { Box } from '@mui/material';
 const Card = styled(Box)({
     display: "flex",
@@ -30,11 +31,13 @@ const data = [{
 }]
 const Step1: FC<Step> = ({ setStep }) => {
     const [screen, setScreen] = useState(0)
+
     return (
         <Container >
             <Item xs={12}>
                 {screen === 0 ? <MotionDiv variants={FadeInOut}>
-                    <Container alignItems='center' sx={{ padding: { xs: 4, md: 0 }, flexDirection: { xs: 'column-reverse', md: 'row' } }}>
+                    <Container alignItems='center'
+                        sx={{ padding: { xs: 4, md: 0 }, flexDirection: { xs: 'column-reverse', md: 'row' } }}>
                         <Item xs={12} md={6}>
                             <StepText>
                                 Paso 1
@@ -71,7 +74,7 @@ const Step1: FC<Step> = ({ setStep }) => {
                 </MotionDiv>
 
                     : null}
-                {screen === 1 ? <MotionDiv variants={FadeInOut}>
+                {screen === 1 ? <MotionDiv >
                     <Container justifyContent='center'>
                         <Item xs={12}>
                             <Card sx={{ width: { xs: '100vw', md: '50vw' } }}>
@@ -96,7 +99,7 @@ const Step1: FC<Step> = ({ setStep }) => {
                 </MotionDiv>
                     : null}
             </Item>
-        </Container>
+        </Container >
 
     )
 }

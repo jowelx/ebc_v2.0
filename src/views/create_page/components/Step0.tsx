@@ -22,7 +22,7 @@ const Step1: FC<Step> = ({ setStep }) => {
     return (
         <Container>
             <Item xs={12}>
-                <MotionDiv variants={FadeInOut}>
+                <MotionDiv>
                     <Container alignItems='center' sx={{ padding: { xs: 4, md: 0 } }}>
                         <Item xs={12} md={6}>
                             <Title variant='h2' size={47} sx={{ fontSize: { xs: 27, md: 47 } }}>
